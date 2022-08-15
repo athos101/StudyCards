@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class ConexaoMySql {
 	
-	private static Connection con;
-	private static String status;
+	private static Connection conexao;
+	private static String status_da_conexao;
 	
 	public ConexaoMySql(){
 		
@@ -15,36 +15,35 @@ public class ConexaoMySql {
 	
 	public static Connection abrirConexaoMySQL(){
 		String servidor="localhost";
-		String banco="meubanco";
-		String usuario="teste";
-		String senha="poo2";
+		String banco="studycards";
+		String usuario="athos";
+		String senha="2003";
 		String url="jdbc:mysql://"+servidor+":3306/"+banco;
 		
 		try {
-			con=DriverManager.getConnection(url,usuario,senha);
+			conexao=DriverManager.getConnection(url,usuario,senha);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return con;
+			return conexao;
 		}
 		
-		if(con != null)
-			
-			status="STATUS--> Conexao com o banco realizada com sucesso!";
+		if(conexao != null)
+			status_da_conexao="STATUS--> Conexao com o banco realizada com sucesso!";
 		else
-			status="STATUS--> Falha na conexao com o banco!";
+			status_da_conexao="STATUS--> Falha na conexao com o banco!";
 		
-		return con;
+		return conexao;
 		
 	}
 	
 	public static void obterStatusConexao(){
-		System.out.println(status);
+		System.out.println(status_da_conexao);
 	}
 	
 	public static void fecharConexao(){
 		try {
-			con.close();
+			conexao.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
