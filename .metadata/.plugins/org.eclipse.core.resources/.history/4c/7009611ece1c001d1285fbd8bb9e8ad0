@@ -1,0 +1,25 @@
+package view;
+
+import java.awt.BorderLayout;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class PainelInicio extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PainelInicio() {
+		setLayout(new BorderLayout(0, 0));
+		
+		Icon icone_adicionar = new ImageIcon("plus.png");
+		
+		JButton buttonAdicionarCarta = new JButton(icone_adicionar);
+		add(buttonAdicionarCarta, BorderLayout.CENTER);
+		
+	}
+
+}

@@ -97,4 +97,28 @@ public class JanelaInicial extends JFrame {
 		this.painelInicio = painelInicio;
 	}
 
+	public PainelAdicionandoCard getPainelAdicionar() {
+		return painelAdicionar;
+	}
+
+	public void setPainelAdicionar(PainelAdicionandoCard painelAdicionar) {
+		this.painelAdicionar = painelAdicionar;
+	}
+
+	public PainelBaralho getPainelBaralho() {
+		return painelBaralho;
+	}
+
+	public void setPainelBaralho(PainelBaralho painelBaralho) {
+		this.painelBaralho = painelBaralho;
+	}
+
+	public void setMenu_inicio(JMenuItem menu_inicio) {
+		this.menu_inicio = menu_inicio;
+	}
+
+	public void setMenu_baralho(JMenuItem menu_baralho) {
+		this.menu_baralho = menu_baralho;
+	}
+
 }

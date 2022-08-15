@@ -1,0 +1,17 @@
+package view;
+
+import javax.swing.JPanel;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.JLabel;
+
+public class PainelBaralho extends JPanel {
+
+	public PainelBaralho() {
+		setLayout(new MigLayout("", "[grow]", "[]"));
+		
+		JLabel labelCards = new JLabel("Nenhuma carta criada");
+		add(labelCards, "cell 0 0");
+		
+	}
+
+}

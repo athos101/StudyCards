@@ -1,0 +1,11 @@
+package controller;
+
+import view.JanelaInicial;
+
+public class ControleInicio {
+	private JanelaInicial janela;
+	
+	public ControleInicio(JanelaInicial janela) {
+		this.janela = janela;
+	}
+}

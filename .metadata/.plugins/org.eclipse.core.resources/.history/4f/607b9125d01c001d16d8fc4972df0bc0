@@ -1,0 +1,28 @@
+package view;
+
+import java.awt.BorderLayout;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import net.miginfocom.swing.MigLayout;
+
+public class PainelInicio extends JPanel {
+
+	private JButton button_adicionar;
+	
+	public PainelInicio() {
+		
+		setLayout(new MigLayout("", "[grow][][grow]", "[grow][][grow]"));
+		
+		ImageIcon image_icon_plus = new ImageIcon("/images/plus.png");
+		
+		Icon icone_adicionar = image_icon_plus;
+		
+		button_adicionar = new JButton(icone_adicionar);
+		add(button_adicionar, "cell 1 1");
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import view.JanelaInicial;
+
+public class ControleInicio implements ActionListener{
+	private JanelaInicial janela;
+	
+	public ControleInicio(JanelaInicial janela) {
+		this.janela = janela;
+		
+		janela.getMenu_inicio().addActionListener(this);
+		
+
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println("algo");
+		if(e.getActionCommand().equals("inicio")) {
+			janela.getCard_layout().show(janela.getContentPane(), "painelInicio");
+		}
+	}
+}

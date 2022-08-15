@@ -1,0 +1,62 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class JanelaInicial extends JFrame {
+
+	private JPanel contentPane;
+	private JMenuBar menubar_principal;
+	private JMenu menu_inicio;
+	private JMenu menu_baralho;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					JanelaInicial frame = new JanelaInicial();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public JanelaInicial() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		setTitle("Study Cards");
+		
+		// ---| MENU |-----------------------
+		
+		menubar_principal = new JMenuBar();
+		setJMenuBar(menubar_principal);
+		
+		menu_inicio = new JMenu("inicio");
+		menubar_principal.add(menu_inicio);
+		
+		menu_baralho = new JMenu("baralho");
+		menubar_principal.add(menu_baralho);
+		
+		// ---| CONTENTPANE |-----------------------
+		
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	}
+
+}

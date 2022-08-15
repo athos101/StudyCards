@@ -8,5 +8,6 @@ public class App {
 		janela.setVisible(true);
 		
 		ControleInicio controle_inicio = new ControleInicio(janela);
+		ControleAdicionar controle_adicionar = new ControleAdicionar(janela);
 	}
 }

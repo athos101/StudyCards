@@ -1,0 +1,11 @@
+package implementation;
+
+public class Square implements Polygon{
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Square";
+	}
+
+}

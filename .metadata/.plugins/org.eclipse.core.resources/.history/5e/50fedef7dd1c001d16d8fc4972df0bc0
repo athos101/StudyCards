@@ -1,0 +1,22 @@
+package controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import view.PainelAdicionandoCard;
+
+public class ControleAdicionar implements ActionListener{
+	private PainelAdicionandoCard painel_adicionar;
+	
+	public ControleAdicionar(PainelAdicionandoCard painel_adicionar) {
+		this.painel_adicionar = painel_adicionar;
+		this.painel_adicionar.getButtonSalvar().addActionListener(this);
+		this.painel_adicionar.getButtonCancelar().addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

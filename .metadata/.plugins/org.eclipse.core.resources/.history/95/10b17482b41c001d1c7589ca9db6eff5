@@ -1,0 +1,11 @@
+package implementation;
+
+public class Triangle implements Polygon{
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "TriangleS";
+	}
+
+}
