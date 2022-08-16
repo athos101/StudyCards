@@ -36,6 +36,9 @@ public class ControleInicio implements ActionListener{
 		
 		if(evento.getActionCommand().equals("baralho")) {
 			janela.getCard_layout().show(janela.getContentPane(), "painelBaralho");
+			ControleBaralho controle_baralho = new ControleBaralho(
+					janela.getPainelBaralho());
+			controle_baralho.carregar_baralho();
 		}
 		
 	}

@@ -9,10 +9,6 @@ public class ConexaoMySql {
 	private static Connection conexao;
 	private static String status_da_conexao;
 	
-	public ConexaoMySql(){
-		
-	}
-	
 	public static Connection abrirConexaoMySQL(){
 		String servidor="localhost";
 		String banco="studycards";
