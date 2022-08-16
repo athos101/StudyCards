@@ -24,7 +24,6 @@ public class ControleInicio implements ActionListener{
 				}
 			});
 		
-		
 	}
 
 	@Override
